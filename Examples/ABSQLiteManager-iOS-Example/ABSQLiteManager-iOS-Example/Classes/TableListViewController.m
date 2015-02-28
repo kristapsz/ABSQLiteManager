@@ -78,7 +78,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     RowsViewController *detailController = [segue destinationViewController];
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-    // Getting currently selected table name
+    // Getting table name for selected row
     NSString *table = self.tables[indexPath.row];
     // Getting all rows from the table
     NSArray *rows = [self.objectReader fetchRowsFromTable:table columns:nil predicate:nil error:nil];

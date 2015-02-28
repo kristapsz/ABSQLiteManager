@@ -62,7 +62,10 @@
         [components addObject:lastName];
     cell.textLabel.text = [components componentsJoinedByString:@" "];
     NSNumber *birthYear = [row valueForKey:@"birth_year"];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"Born: %@", birthYear];
+    if (birthYear)
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"Born: %@", birthYear];
+    else
+        cell.detailTextLabel.text = @"";
     return cell;
 }
 
