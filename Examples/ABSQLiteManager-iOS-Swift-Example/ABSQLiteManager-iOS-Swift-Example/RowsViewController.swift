@@ -48,7 +48,7 @@ class RowsViewController: UITableViewController {
         if let lastName = (row["last_name"] as? String) {
             components.append(lastName)
         }
-        cell.textLabel?.text = join(" ", components)
+        cell.textLabel?.text = components.joinWithSeparator(" ")
         
         if let birthYear = (row["birth_year"] as? Int) {
             cell.detailTextLabel?.text = "Born: " + String(birthYear)

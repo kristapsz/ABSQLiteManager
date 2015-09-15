@@ -34,7 +34,7 @@
  *
  *  @return A reader for the given SQLite 3 database.
  */
-- (instancetype)initWithDatabasePath:(NSString*)path;
+- (instancetype _Nonnull)initWithDatabasePath:(NSString * _Nonnull)path;
 
 # pragma mark - Database Structure
 
@@ -43,7 +43,7 @@
  *
  *  @return Array of table names as strings.
  */
-- (NSArray*)tables;
+- (NSArray * _Nonnull)tables;
 
 /**
  *  Use this method to get the structure of a table.
@@ -52,7 +52,7 @@
  *
  *  @return Array of dictionaries with column information by executing query "PRAGMA table_info(tableName)"
  */
-- (NSArray*)structureOfTable:(NSString*)tableName;
+- (NSArray * _Nullable)structureOfTable:(NSString * _Nonnull)tableName;
 
 /**
  *  Use this method to get a list of all columns in the given table.
@@ -61,7 +61,7 @@
  *
  *  @return Array of column names as strings.
  */
-- (NSArray*)columnsForTable:(NSString*)tableName;
+- (NSArray * _Nullable)columnsForTable:(NSString * _Nullable)tableName;
 
 # pragma mark - Number of Rows
 
@@ -73,7 +73,7 @@
  *
  *  @return Number of rows in the given table.
  */
-- (NSInteger)numberOfRowsInTable:(NSString*)table error:(NSError**)error;
+- (NSInteger)numberOfRowsInTable:(NSString * _Nonnull)table error:(NSError * _Nullable * _Nullable)error;
 
 /**
  *  Use this method to get a number of rows in a table by using predicate.
@@ -84,7 +84,7 @@
  *
  *  @return Number of rows in the given table with predicate.
  */
-- (NSInteger)numberOfRowsInTable:(NSString*)table predicate:(NSPredicate*)predicate error:(NSError**)error;
+- (NSInteger)numberOfRowsInTable:(NSString * _Nonnull)table predicate:(NSPredicate * _Nullable)predicate error:(NSError * _Nullable * _Nullable)error;
 
 /**
  *  Use this method to get a number of rows for given query.
@@ -94,7 +94,7 @@
  *
  *  @return Number of rows for given query.
  */
-- (NSInteger)numberOfRowsForQuery:(NSString*)query error:(NSError**)error;
+- (NSInteger)numberOfRowsForQuery:(NSString * _Nonnull)query error:(NSError * _Nullable * _Nullable)error;
 
 # pragma mark - Fetching rows
 
@@ -106,7 +106,7 @@
  *
  *  @return Array of fetched objects.
  */
-- (NSArray*)fetchRowsWithQuery:(NSString*)query error:(NSError**)error;
+- (NSArray * _Nullable)fetchRowsWithQuery:(NSString * _Nonnull)query error:(NSError * _Nullable * _Nullable)error;
 
 /**
  *  Use this method to load contents of a table into memory.
@@ -119,7 +119,7 @@
  *
  *  @return Array of fetched objects.
  */
-- (NSArray*)fetchRowsFromTable:(NSString*)tableName columns:(NSArray*)columns predicate:(NSPredicate*)predicte error:(NSError**)error;
+- (NSArray * _Nullable)fetchRowsFromTable:(NSString * _Nonnull)tableName columns:(NSArray * _Nullable)columns predicate:(NSPredicate * _Nullable)predicte error:(NSError * _Nullable * _Nullable)error;
 
 /**
  *  Use this method to load all contents of the database in a dictionary.
@@ -132,6 +132,6 @@
  *                   }
  *  @return Dictionary with table names as keys and rows as an array of dictionaries.
  */
-- (NSDictionary*)fetchAllTables;
+- (NSDictionary * _Nonnull)fetchAllTables;
 
 @end

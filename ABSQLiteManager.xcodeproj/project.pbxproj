@@ -126,6 +126,7 @@
 		632E22F11A9CF9770010B81F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = Alphablind;
 				TargetAttributes = {

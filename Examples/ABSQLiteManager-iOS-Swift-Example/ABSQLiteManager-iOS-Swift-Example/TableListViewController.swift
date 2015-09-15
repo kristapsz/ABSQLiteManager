@@ -31,11 +31,11 @@ class TableListViewController: UITableViewController {
     var tables: [String]
     
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         let path = NSBundle.mainBundle().pathForResource("ABSQLReader", ofType: "sqlite")
-        self.objectReader = ABSQLiteReader(databasePath: path)
-        self.tables = self.objectReader.tables() as [String]
-        super.init(coder: aDecoder)
+        self.objectReader = ABSQLiteReader(databasePath: path!)
+        self.tables = self.objectReader.tables() as! [String]
+        super.init(coder: aDecoder)!
     }
 
     // MARK: - Table view data source
@@ -60,13 +60,15 @@ class TableListViewController: UITableViewController {
     // MARK: - Segue
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let detailController = segue.destinationViewController as RowsViewController
-        if let indexPath = self.tableView.indexPathForSelectedRow() {
+        let detailController = segue.destinationViewController as! RowsViewController
+        if let indexPath = self.tableView.indexPathForSelectedRow {
             // Getting table name for selected row
             let table = self.tables[indexPath.row]
             // Fetching all rows from the table
-            let rows = self.objectReader.fetchRowsFromTable(table, columns: nil, predicate: nil, error: nil) as [Dictionary<String, AnyObject>]
-            detailController.rows = rows
+            do {
+                let rows = try self.objectReader.fetchRowsFromTable(table, columns: nil, predicate: nil) as! [Dictionary<String, AnyObject>]
+                detailController.rows = rows
+            } catch {}
         }
     }
 }

@@ -36,7 +36,7 @@
 
 @implementation ABSQLiteReader
 
-- (instancetype)initWithDatabasePath:(NSString*)path {
+- (instancetype _Nonnull)initWithDatabasePath:(NSString * _Nonnull)path {
     self = [super init];
     if (self) {
         self.path = path;
@@ -44,7 +44,7 @@
     return self;
 }
 
-- (sqlite3*)connection {
+- (sqlite3 *)connection {
     if (!_connection) {
         if (sqlite3_open([self.path UTF8String], &_connection) == SQLITE_OK) {
             // Database was opened
@@ -63,7 +63,7 @@
 
 #pragma mark - Database Strucutre
 
-- (NSArray*)tables {
+- (NSArray * _Nonnull)tables {
     NSArray *objects = [self fetchRowsFromTable:@"sqlite_master" columns:@[@"name"] predicate:[NSPredicate predicateWithFormat:@"type='table'"] error:nil];
     NSMutableArray *output = [NSMutableArray new];
     for (NSDictionary *object in objects) {
@@ -72,12 +72,12 @@
     return output;
 }
 
-- (NSArray*)structureOfTable:(NSString*)tableName {
+- (NSArray * _Nullable)structureOfTable:(NSString * _Nonnull)tableName {
     NSString *query = [NSString stringWithFormat:@"PRAGMA table_info(%@)", tableName];
     return [self fetchRowsWithQuery:query error:nil];
 }
 
-- (NSArray*)columnsForTable:(NSString*)tableName {
+- (NSArray * _Nullable)columnsForTable:(NSString * _Nullable)tableName {
     NSMutableArray *output = [NSMutableArray new];
     NSArray *objects = [self structureOfTable:tableName];
     for (NSDictionary *object in objects) {
@@ -89,11 +89,11 @@
 
 #pragma mark - Counting rows
 
-- (NSInteger)numberOfRowsInTable:(NSString*)table error:(NSError**)error {
+- (NSInteger)numberOfRowsInTable:(NSString * _Nonnull)table error:(NSError * _Nullable * _Nullable)error {
     return [self numberOfRowsInTable:table predicate:nil error:error];
 }
 
-- (NSInteger)numberOfRowsInTable:(NSString*)table predicate:(NSPredicate*)predicate error:(NSError**)error {
+- (NSInteger)numberOfRowsInTable:(NSString * _Nonnull)table predicate:(NSPredicate * _Nullable)predicate error:(NSError * _Nullable * _Nullable)error {
     NSMutableString *query = [NSMutableString stringWithFormat:@"SELECT COUNT(*) AS count FROM %@", table];
     if (predicate) {
         [query appendFormat:@" WHERE %@", predicate.predicateFormat];
@@ -106,8 +106,7 @@
     return [row[@"count"] integerValue];
 }
 
-- (NSInteger)numberOfRowsForQuery:(NSString*)query error:(NSError**)error
-{
+- (NSInteger)numberOfRowsForQuery:(NSString * _Nonnull)query error:(NSError * _Nullable * _Nullable)error {
     NSString *countQuery = [NSString stringWithFormat:@"SELECT COUNT(*) AS count FROM (%@)", query];
     NSArray *rows = [self fetchRowsWithQuery:countQuery error:error];
     if ((error && *error) || rows.count!=1) {
@@ -118,7 +117,7 @@
 
 #pragma mark - Fetching Rows
 
-- (NSArray*)fetchRowsWithQuery:(NSString*)query error:(NSError**)error {
+- (NSArray * _Nullable)fetchRowsWithQuery:(NSString * _Nonnull)query error:(NSError * _Nullable * _Nullable)error {
     if (!self.connection) {
         if (error) {
             NSDictionary *userInfo = @{NSLocalizedDescriptionKey: [NSString stringWithFormat:@"Database cannot be opened."]};
@@ -132,15 +131,16 @@
     printf("%s\n", query.UTF8String);
 #endif
     NSMutableArray *objects=[NSMutableArray new]; // storage for fetched objects
-    @autoreleasepool {
-        sqlite3_stmt *selectstmt; // select statement
-        if(sqlite3_prepare_v2(self.connection, [query UTF8String], -1, &selectstmt, NULL) == SQLITE_OK) {
-            NSMutableArray *columns = [NSMutableArray new]; // storage for column names
-            int columnsCount = sqlite3_column_count(selectstmt); // getting column count
-            for (int i=0; i<columnsCount; i++) { // reading names of columns
-                NSString *name = [NSString stringWithCString:(char *)sqlite3_column_name(selectstmt, (int)i) encoding:NSUTF8StringEncoding];
-                [columns addObject:name];
-            }
+    
+    sqlite3_stmt *selectstmt; // select statement
+    if(sqlite3_prepare_v2(self.connection, [query UTF8String], -1, &selectstmt, NULL) == SQLITE_OK) {
+        NSMutableArray *columns = [NSMutableArray new]; // storage for column names
+        int columnsCount = sqlite3_column_count(selectstmt); // getting column count
+        for (int i=0; i<columnsCount; i++) { // reading names of columns
+            NSString *name = [NSString stringWithCString:(char *)sqlite3_column_name(selectstmt, (int)i) encoding:NSUTF8StringEncoding];
+            [columns addObject:name];
+        }
+        @autoreleasepool {
             while(sqlite3_step(selectstmt) == SQLITE_ROW) { // executing query and looping through rows
                 NSMutableDictionary *object = [NSMutableDictionary new];
                 [columns enumerateObjectsUsingBlock:^(NSString *column, NSUInteger idx, BOOL *stop) { // reading all columns
@@ -163,21 +163,22 @@
                 }];
                 [objects addObject:object];
             }
-        } else {
-            if (error) {
-                NSDictionary *userInfo = @{NSLocalizedDescriptionKey: [NSString stringWithFormat:@"Query execution failed: %@", query]};
-                *error = [NSError errorWithDomain:@"ABSQLiteManager"
-                                             code:101
-                                         userInfo:userInfo];
-            }
-            return nil;
         }
-        sqlite3_finalize(selectstmt);
+    } else {
+        if (error) {
+            NSDictionary *userInfo = @{NSLocalizedDescriptionKey: [NSString stringWithFormat:@"Query execution failed: %@", query]};
+            *error = [NSError errorWithDomain:@"ABSQLiteManager"
+                                         code:101
+                                     userInfo:userInfo];
+        }
+        return nil;
     }
+    sqlite3_finalize(selectstmt);
+    
     return objects;
 }
 
-- (NSArray*)fetchRowsFromTable:(NSString*)tableName columns:(NSArray*)columns predicate:(NSPredicate*)predicte error:(NSError**)error {
+- (NSArray * _Nullable)fetchRowsFromTable:(NSString * _Nonnull)tableName columns:(NSArray * _Nullable)columns predicate:(NSPredicate * _Nullable)predicte error:(NSError * _Nullable * _Nullable)error {
     // building the query
     NSMutableString *query = [NSMutableString new];
     [query appendString:@"SELECT "];
@@ -194,7 +195,7 @@
     return [self fetchRowsWithQuery:query error:error];
 }
 
-- (NSDictionary*)fetchAllTables {
+- (NSDictionary * _Nonnull)fetchAllTables {
     NSArray *tables = [self tables]; // getting list of all tables
     NSMutableDictionary *output = [NSMutableDictionary new];
     for (NSString *table in tables) {

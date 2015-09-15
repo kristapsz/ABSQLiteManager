@@ -12,12 +12,12 @@ It provides:
 - Easily fetching rows by using sql queries
 - Use NSPredicate
 - ARM64 support
-- Swift support (by using ABSQLiteManager.Framework)
+- Swift 2 support (by using ABSQLiteManager.Framework)
 
 NOTE: Use it only with queries whose results can fit into the memory.
 
 ABSQLiteManager was originally developed and used in the first versions of [NATURE MOBILE](https://www.naturemobile.org) apps between 2010 and 2012. After that it was replaced with Core Data.
-This library sometimes still might be useful as a quick way to read sqlite files. The project is modernized to be compatible with ARC, AMR64 and XCode 6, but the source files still should be compatible with any iOS SDK that supports ARC.
+This library sometimes still might be useful as a quick way to read sqlite files. The project is modernized to be compatible with ARC, AMR64 and XCode 7. The v0.1 source files still should be compatible with any iOS SDK that supports ARC.
 
 
 ## How to use it
