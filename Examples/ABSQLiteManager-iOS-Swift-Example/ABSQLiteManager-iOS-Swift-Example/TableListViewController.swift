@@ -32,7 +32,7 @@ class TableListViewController: UITableViewController {
     
     
     required init?(coder aDecoder: NSCoder) {
-        let path = NSBundle.mainBundle().pathForResource("ABSQLReader", ofType: "sqlite")
+        let path = Bundle.main.path(forResource: "ABSQLReader", ofType: "sqlite")
         self.objectReader = ABSQLiteReader(databasePath: path!)
         self.tables = self.objectReader.tables() as! [String]
         super.init(coder: aDecoder)!
@@ -40,33 +40,33 @@ class TableListViewController: UITableViewController {
 
     // MARK: - Table view data source
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1;
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.tables.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as UITableViewCell
         let table = self.tables[indexPath.row]
         cell.textLabel?.text = "Table: " + table
-        let rowsCount = self.objectReader.numberOfRowsInTable(table, error: nil)
+        let rowsCount = self.objectReader.numberOfRows(inTable: table, error: nil)
         cell.detailTextLabel?.text = "Rows: " + String(rowsCount)
         return cell;
     }
     
     // MARK: - Segue
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let detailController = segue.destinationViewController as! RowsViewController
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let detailController = segue.destination as! RowsViewController
         if let indexPath = self.tableView.indexPathForSelectedRow {
             // Getting table name for selected row
             let table = self.tables[indexPath.row]
             // Fetching all rows from the table
             do {
-                let rows = try self.objectReader.fetchRowsFromTable(table, columns: nil, predicate: nil) as! [Dictionary<String, AnyObject>]
+                let rows = try self.objectReader.fetchRows(fromTable: table, columns: nil, predicate: nil) as! [Dictionary<String, AnyObject>]
                 detailController.rows = rows
             } catch {}
         }

@@ -30,16 +30,16 @@ class RowsViewController: UITableViewController {
     
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.rows.count
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as UITableViewCell
         let row = self.rows[indexPath.row]
         var components: [String] = []
         if let firstName = (row["first_name"] as? String) {
@@ -48,7 +48,7 @@ class RowsViewController: UITableViewController {
         if let lastName = (row["last_name"] as? String) {
             components.append(lastName)
         }
-        cell.textLabel?.text = components.joinWithSeparator(" ")
+        cell.textLabel?.text = components.joined(separator: " ")
         
         if let birthYear = (row["birth_year"] as? Int) {
             cell.detailTextLabel?.text = "Born: " + String(birthYear)

@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		14DC935F6164ACE77F9F78CB8F09FF4E /* ABSQLiteManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 495B9488CF9FC5499339A73B8A6F1FA3 /* ABSQLiteManager-dummy.m */; };
+		16580A40087385B1E9404517589B9C57 /* ABSQLiteReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E7EF8D23193890D228AE94B5AE99B9B /* ABSQLiteReader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1AAEC9741D54F58124A756C0BC2ADBE8 /* ABSQLiteManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A49128FCE7AA84D54DC197BB59B647D /* ABSQLiteManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6439B56F415248283EDBF03FE1625DB6 /* ABSQLiteReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE043A0262FAC4AF7CC5E68004F22BE /* ABSQLiteReader.m */; };
+		6AE5F12F118C9054C1E343D0C3B10FD7 /* Pods-ABSQLiteManager-iOS-Swift-Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B4BC0332765626E3D3C798099A54C1B6 /* Pods-ABSQLiteManager-iOS-Swift-Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC474C31AA2DB683B9EA061BFA7394D7 /* Pods-ABSQLiteManager-iOS-Swift-Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0905A1C054C7204F56FC4169AC696566 /* Pods-ABSQLiteManager-iOS-Swift-Example-dummy.m */; };
+		CAB025B54E2F15F32AB9054C072E4010 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		D41C1878F7C41B39AB8C58F28CE99B3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6312F68424C70D8611DEE911B0B6B8ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3830B015610F53B3C483E4A3AB09265;
+			remoteInfo = ABSQLiteManager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0366A779B038ECB399BE6595A0FCFDB1 /* ABSQLiteManager.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ABSQLiteManager.xcconfig; sourceTree = "<group>"; };
+		036A6F9CA809D4505AFD650120A9525A /* Pods-ABSQLiteManager-iOS-Swift-Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ABSQLiteManager-iOS-Swift-Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0905A1C054C7204F56FC4169AC696566 /* Pods-ABSQLiteManager-iOS-Swift-Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ABSQLiteManager-iOS-Swift-Example-dummy.m"; sourceTree = "<group>"; };
+		0B4C1E3333030CBAF0587C46EC7678F3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19E21DBEA6946E6425EC74C164106EBF /* Pods-ABSQLiteManager-iOS-Swift-Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ABSQLiteManager-iOS-Swift-Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		1BBF68704888888833D8A1EDBD3BC0CD /* Pods-ABSQLiteManager-iOS-Swift-Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ABSQLiteManager-iOS-Swift-Example.modulemap"; sourceTree = "<group>"; };
+		2015BBB3F1776E83E5ADEB9E825DB792 /* ABSQLiteManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ABSQLiteManager-prefix.pch"; sourceTree = "<group>"; };
+		495B9488CF9FC5499339A73B8A6F1FA3 /* ABSQLiteManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ABSQLiteManager-dummy.m"; sourceTree = "<group>"; };
+		4E7EF8D23193890D228AE94B5AE99B9B /* ABSQLiteReader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ABSQLiteReader.h; path = ABSQLiteManager/Classes/ABSQLiteReader.h; sourceTree = "<group>"; };
+		56FA9ADCD109EEE3FFD69E7753DE376A /* Pods_ABSQLiteManager_iOS_Swift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABSQLiteManager_iOS_Swift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BB5BB0F258B6BD5B25E22781034FCBB /* Pods-ABSQLiteManager-iOS-Swift-Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ABSQLiteManager-iOS-Swift-Example-frameworks.sh"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6A49128FCE7AA84D54DC197BB59B647D /* ABSQLiteManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ABSQLiteManager-umbrella.h"; sourceTree = "<group>"; };
+		6AE043A0262FAC4AF7CC5E68004F22BE /* ABSQLiteReader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ABSQLiteReader.m; path = ABSQLiteManager/Classes/ABSQLiteReader.m; sourceTree = "<group>"; };
+		7EDBB3415B5595CEB3E597B02F803790 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AD4A0442A0D9C163D07A6CCBD6CECD7 /* ABSQLiteManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ABSQLiteManager.modulemap; sourceTree = "<group>"; };
+		8B2472960FAE749FC7566A5139B2B2E2 /* Pods-ABSQLiteManager-iOS-Swift-Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ABSQLiteManager-iOS-Swift-Example-resources.sh"; sourceTree = "<group>"; };
+		8C4477BBC39E1FC660EE146838E6C662 /* Pods-ABSQLiteManager-iOS-Swift-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ABSQLiteManager-iOS-Swift-Example.release.xcconfig"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AAF5AC442E4BC039DB205C42087E673E /* ABSQLiteManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ABSQLiteManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4BC0332765626E3D3C798099A54C1B6 /* Pods-ABSQLiteManager-iOS-Swift-Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ABSQLiteManager-iOS-Swift-Example-umbrella.h"; sourceTree = "<group>"; };
+		EE5DEF999DCDEDB6594F12F56D76AA1F /* Pods-ABSQLiteManager-iOS-Swift-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ABSQLiteManager-iOS-Swift-Example.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		41D2AABF99B6D465655A73801E4DF976 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAB025B54E2F15F32AB9054C072E4010 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECF6DC43A0E1AB0FBFD5E19F1662EF62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D41C1878F7C41B39AB8C58F28CE99B3E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03D5593D2ABC38F00463174825F35FA7 /* ABSQLiteManager */ = {
+			isa = PBXGroup;
+			children = (
+				4E7EF8D23193890D228AE94B5AE99B9B /* ABSQLiteReader.h */,
+				6AE043A0262FAC4AF7CC5E68004F22BE /* ABSQLiteReader.m */,
+				E1D91E2AA97CE2F4A446E06520A176E8 /* Support Files */,
+			);
+			name = ABSQLiteManager;
+			path = ../../..;
+			sourceTree = "<group>";
+		};
+		1EA477B2271A56DC485D9759DD09C8A1 /* Pods-ABSQLiteManager-iOS-Swift-Example */ = {
+			isa = PBXGroup;
+			children = (
+				0B4C1E3333030CBAF0587C46EC7678F3 /* Info.plist */,
+				1BBF68704888888833D8A1EDBD3BC0CD /* Pods-ABSQLiteManager-iOS-Swift-Example.modulemap */,
+				036A6F9CA809D4505AFD650120A9525A /* Pods-ABSQLiteManager-iOS-Swift-Example-acknowledgements.markdown */,
+				19E21DBEA6946E6425EC74C164106EBF /* Pods-ABSQLiteManager-iOS-Swift-Example-acknowledgements.plist */,
+				0905A1C054C7204F56FC4169AC696566 /* Pods-ABSQLiteManager-iOS-Swift-Example-dummy.m */,
+				5BB5BB0F258B6BD5B25E22781034FCBB /* Pods-ABSQLiteManager-iOS-Swift-Example-frameworks.sh */,
+				8B2472960FAE749FC7566A5139B2B2E2 /* Pods-ABSQLiteManager-iOS-Swift-Example-resources.sh */,
+				B4BC0332765626E3D3C798099A54C1B6 /* Pods-ABSQLiteManager-iOS-Swift-Example-umbrella.h */,
+				EE5DEF999DCDEDB6594F12F56D76AA1F /* Pods-ABSQLiteManager-iOS-Swift-Example.debug.xcconfig */,
+				8C4477BBC39E1FC660EE146838E6C662 /* Pods-ABSQLiteManager-iOS-Swift-Example.release.xcconfig */,
+			);
+			name = "Pods-ABSQLiteManager-iOS-Swift-Example";
+			path = "Target Support Files/Pods-ABSQLiteManager-iOS-Swift-Example";
+			sourceTree = "<group>";
+		};
+		5B4F1B841931309A836B9A6E660B5412 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAF5AC442E4BC039DB205C42087E673E /* ABSQLiteManager.framework */,
+				56FA9ADCD109EEE3FFD69E7753DE376A /* Pods_ABSQLiteManager_iOS_Swift_Example.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				AEF0BA9DA1FEC5031FB73D47CA4D2D7A /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				5B4F1B841931309A836B9A6E660B5412 /* Products */,
+				D9A10058BABC01FE47045C5EBC7389CF /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		AEF0BA9DA1FEC5031FB73D47CA4D2D7A /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				03D5593D2ABC38F00463174825F35FA7 /* ABSQLiteManager */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D9A10058BABC01FE47045C5EBC7389CF /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1EA477B2271A56DC485D9759DD09C8A1 /* Pods-ABSQLiteManager-iOS-Swift-Example */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		E1D91E2AA97CE2F4A446E06520A176E8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8AD4A0442A0D9C163D07A6CCBD6CECD7 /* ABSQLiteManager.modulemap */,
+				0366A779B038ECB399BE6595A0FCFDB1 /* ABSQLiteManager.xcconfig */,
+				495B9488CF9FC5499339A73B8A6F1FA3 /* ABSQLiteManager-dummy.m */,
+				2015BBB3F1776E83E5ADEB9E825DB792 /* ABSQLiteManager-prefix.pch */,
+				6A49128FCE7AA84D54DC197BB59B647D /* ABSQLiteManager-umbrella.h */,
+				7EDBB3415B5595CEB3E597B02F803790 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Examples/ABSQLiteManager-iOS-Swift-Example/Pods/Target Support Files/ABSQLiteManager";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5B564E98ADA0EBAE1A6E7CF2DFF30FA2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AAEC9741D54F58124A756C0BC2ADBE8 /* ABSQLiteManager-umbrella.h in Headers */,
+				16580A40087385B1E9404517589B9C57 /* ABSQLiteReader.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3406A4DB6CF93A8E2A62CE0963A63FF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AE5F12F118C9054C1E343D0C3B10FD7 /* Pods-ABSQLiteManager-iOS-Swift-Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		53BA58F26B0477106E5C2C0489F5A6D8 /* Pods-ABSQLiteManager-iOS-Swift-Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA08FC3A049617B7842B412095BDCC49 /* Build configuration list for PBXNativeTarget "Pods-ABSQLiteManager-iOS-Swift-Example" */;
+			buildPhases = (
+				1BFA6D441C45513DDC2D428BE50DEC1B /* Sources */,
+				41D2AABF99B6D465655A73801E4DF976 /* Frameworks */,
+				F3406A4DB6CF93A8E2A62CE0963A63FF /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2382F46ED6E34146762DC99ABF6EA8E6 /* PBXTargetDependency */,
+			);
+			name = "Pods-ABSQLiteManager-iOS-Swift-Example";
+			productName = "Pods-ABSQLiteManager-iOS-Swift-Example";
+			productReference = 56FA9ADCD109EEE3FFD69E7753DE376A /* Pods_ABSQLiteManager_iOS_Swift_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D3830B015610F53B3C483E4A3AB09265 /* ABSQLiteManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23F8F4BEF75B444D7F8ECC7C1DBA2598 /* Build configuration list for PBXNativeTarget "ABSQLiteManager" */;
+			buildPhases = (
+				638BBDFADD0557DC75D9E3707767A7BF /* Sources */,
+				ECF6DC43A0E1AB0FBFD5E19F1662EF62 /* Frameworks */,
+				5B564E98ADA0EBAE1A6E7CF2DFF30FA2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ABSQLiteManager;
+			productName = ABSQLiteManager;
+			productReference = AAF5AC442E4BC039DB205C42087E673E /* ABSQLiteManager.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					D3830B015610F53B3C483E4A3AB09265 = {
+						LastSwiftMigration = 0910;
+					};
+				};
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 5B4F1B841931309A836B9A6E660B5412 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D3830B015610F53B3C483E4A3AB09265 /* ABSQLiteManager */,
+				53BA58F26B0477106E5C2C0489F5A6D8 /* Pods-ABSQLiteManager-iOS-Swift-Example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1BFA6D441C45513DDC2D428BE50DEC1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC474C31AA2DB683B9EA061BFA7394D7 /* Pods-ABSQLiteManager-iOS-Swift-Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		638BBDFADD0557DC75D9E3707767A7BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14DC935F6164ACE77F9F78CB8F09FF4E /* ABSQLiteManager-dummy.m in Sources */,
+				6439B56F415248283EDBF03FE1625DB6 /* ABSQLiteReader.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2382F46ED6E34146762DC99ABF6EA8E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ABSQLiteManager;
+			target = D3830B015610F53B3C483E4A3AB09265 /* ABSQLiteManager */;
+			targetProxy = 6312F68424C70D8611DEE911B0B6B8ED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1C7D17A37D091C98D2F0DD886C3A9320 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		34FE9531DA9AF2820790339988D5FF41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4842DE787A85EE5BABEF0C41CCF7B29A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE5DEF999DCDEDB6594F12F56D76AA1F /* Pods-ABSQLiteManager-iOS-Swift-Example.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ABSQLiteManager-iOS-Swift-Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ABSQLiteManager-iOS-Swift-Example/Pods-ABSQLiteManager-iOS-Swift-Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ABSQLiteManager_iOS_Swift_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6638CA20FACCF08CF8FB7EDC555D77F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C4477BBC39E1FC660EE146838E6C662 /* Pods-ABSQLiteManager-iOS-Swift-Example.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ABSQLiteManager-iOS-Swift-Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ABSQLiteManager-iOS-Swift-Example/Pods-ABSQLiteManager-iOS-Swift-Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ABSQLiteManager_iOS_Swift_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DD33703AA4FF9AD6E2046489BA96CC7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0366A779B038ECB399BE6595A0FCFDB1 /* ABSQLiteManager.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ABSQLiteManager/ABSQLiteManager-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ABSQLiteManager/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ABSQLiteManager/ABSQLiteManager.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = ABSQLiteManager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E29F78B657FC92999073E739EDFC680A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0366A779B038ECB399BE6595A0FCFDB1 /* ABSQLiteManager.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ABSQLiteManager/ABSQLiteManager-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ABSQLiteManager/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ABSQLiteManager/ABSQLiteManager.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ABSQLiteManager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		23F8F4BEF75B444D7F8ECC7C1DBA2598 /* Build configuration list for PBXNativeTarget "ABSQLiteManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD33703AA4FF9AD6E2046489BA96CC7F /* Debug */,
+				E29F78B657FC92999073E739EDFC680A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C7D17A37D091C98D2F0DD886C3A9320 /* Debug */,
+				34FE9531DA9AF2820790339988D5FF41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA08FC3A049617B7842B412095BDCC49 /* Build configuration list for PBXNativeTarget "Pods-ABSQLiteManager-iOS-Swift-Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4842DE787A85EE5BABEF0C41CCF7B29A /* Debug */,
+				6638CA20FACCF08CF8FB7EDC555D77F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
